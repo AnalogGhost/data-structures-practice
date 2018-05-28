@@ -12,16 +12,16 @@ function isUnique(str) {
         return false
     }
 
-    let char_set = []
+    let charMap = {}
 
-    for (let i=0; i<str.length; i++) {
+    for (let i=0; i < str.length; i++) {
         let val = str.charAt(i)
 
-        if (char_set[val]) {
+        if (charMap[val]) {
             return false
         }
 
-        char_set[val] = true;
+        charMap[val] = true;
     }
 
     return true
